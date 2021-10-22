@@ -57,7 +57,16 @@ namespace DecolaDev.Catalogo.WebAPI.Controllers
         }
 
         [HttpPut()]
-        public async Task<IActionResult> Put([FromBody] TModel model) => Ok(await _Service.UpdateAsync(_Mapper.Map<TEntity>(model)));
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Put([FromBody] TModel model)
+        {
+            var result = await _Service.UpdateAsync(_Mapper.Map<TEntity>(model));
+            
+            if (result == null) return NotFound();
+            
+            return NoContent();
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(TKey id) => Ok(await _Service.DeleteAsync(id));
