@@ -51,7 +51,7 @@ namespace DecolaDev.Catalogo.WebAPI
             services.AddControllers()
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                ).AddFluentValidation(f => f.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+                ).AddFluentValidation(f => f.RegisterValidatorsFromAssembly(typeof(Startup).Assembly));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Infra", "03. Infra", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Repository", "DecolaDev.Catalogo\Infra.Repository\Infra.Repository.csproj", "{210DB7A2-0073-412E-B702-3D7BE5657B53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Tests", "WebAPI.Tests\WebAPI.Tests.csproj", "{7A130597-4878-47C1-9915-7C06EEED7353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{210DB7A2-0073-412E-B702-3D7BE5657B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210DB7A2-0073-412E-B702-3D7BE5657B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210DB7A2-0073-412E-B702-3D7BE5657B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A130597-4878-47C1-9915-7C06EEED7353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A130597-4878-47C1-9915-7C06EEED7353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A130597-4878-47C1-9915-7C06EEED7353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A130597-4878-47C1-9915-7C06EEED7353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{02EBF6B2-45EC-4164-930B-CF52189AB3E8} = {C7D2C7DD-428C-4C3F-9161-ED5FACBA5F1D}
 		{04798135-83DF-4D3A-A5E3-4FC0CACD7CE5} = {C7D2C7DD-428C-4C3F-9161-ED5FACBA5F1D}
 		{210DB7A2-0073-412E-B702-3D7BE5657B53} = {FD8700F7-E84B-461A-8493-180D86CDC2C6}
+		{7A130597-4878-47C1-9915-7C06EEED7353} = {ED4FB6CE-87A2-4E6F-A492-EB034DF211CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49F00B5C-3D08-471E-A6EB-19E1169ED4D5}
