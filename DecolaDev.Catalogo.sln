@@ -5,17 +5,17 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Presentation", "01. Presentation", "{ED4FB6CE-87A2-4E6F-A492-EB034DF211CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "DecolaDev.Catalogo\WebAPI\WebAPI.csproj", "{F85909D0-E3D6-4919-BACB-A930663555B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{F85909D0-E3D6-4919-BACB-A930663555B7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Domain", "02. Domain", "{C7D2C7DD-428C-4C3F-9161-ED5FACBA5F1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Core", "DecolaDev.Catalogo\Domain.Core\Domain.Core.csproj", "{02EBF6B2-45EC-4164-930B-CF52189AB3E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Core", "Domain.Core\Domain.Core.csproj", "{02EBF6B2-45EC-4164-930B-CF52189AB3E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Services", "DecolaDev.Catalogo\Domain.Services\Domain.Services.csproj", "{04798135-83DF-4D3A-A5E3-4FC0CACD7CE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Services", "Domain.Services\Domain.Services.csproj", "{04798135-83DF-4D3A-A5E3-4FC0CACD7CE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Infra", "03. Infra", "{FD8700F7-E84B-461A-8493-180D86CDC2C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Repository", "DecolaDev.Catalogo\Infra.Repository\Infra.Repository.csproj", "{210DB7A2-0073-412E-B702-3D7BE5657B53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Repository", "Infra.Repository\Infra.Repository.csproj", "{210DB7A2-0073-412E-B702-3D7BE5657B53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Tests", "WebAPI.Tests\WebAPI.Tests.csproj", "{7A130597-4878-47C1-9915-7C06EEED7353}"
 EndProject

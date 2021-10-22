@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DecolaDev.Catalogo\Domain.Core\Domain.Core.csproj" />
-    <ProjectReference Include="..\DecolaDev.Catalogo\WebAPI\WebAPI.csproj" />
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
+    <ProjectReference Include="..\WebAPI\WebAPI.csproj" />
   </ItemGroup>
 
 </Project>
