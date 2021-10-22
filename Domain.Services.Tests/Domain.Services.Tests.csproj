@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>DecolaDev.Catalogo.WebAPI.Tests</AssemblyName>
-    <RootNamespace>DecolaDev.Catalogo.WebAPI.Tests</RootNamespace>
+    <AssemblyName>DecolaDev.Catalogo.Domain.Services.Tests</AssemblyName>
+    <RootNamespace>DecolaDev.Catalogo.Domain.Services.Tests</RootNamespace>
+
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -12,9 +13,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.11" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-    <PackageReference Include="Microsoft.TestPlatform.ObjectModel" Version="16.11.0" />
+    <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
-    <ProjectReference Include="..\WebAPI\WebAPI.csproj" />
+    <ProjectReference Include="..\Domain.Services\Domain.Services.csproj" />
   </ItemGroup>
 
 </Project>

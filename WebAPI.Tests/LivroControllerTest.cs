@@ -19,11 +19,12 @@ namespace DecolaDev.Catalogo.WebAPI.Tests
             _webAppFixture = webAppFixture;
         }
 
-        [Fact(DisplayName = "DADO um Developer válido QUANDO solicitamos sua inclusão ENTÃO retornar StatusCode = Created")]
+        [Fact(DisplayName = "DADO um Livro válido QUANDO solicitamos sua inclusão ENTÃO retornar StatusCode = Created")]
         public async Task PostWhenIsValid()
         {
             //Arrange
             HttpClient httpClient = _webAppFixture.CreateHttpClient();
+            
             Livro model = new Livro();
 
             //Act
