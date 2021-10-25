@@ -36,7 +36,7 @@ namespace DecolaDev.Catalogo.WebAPI
             #endregion
 
             #region DbContext
-            services.AddDbContext<RepositoryContext>(options => options.UseInMemoryDatabase(databaseName: "DecolaDev.Catalogo_DB"));
+            services.AddDbContext<RepositoryContext>(options => options.UseInMemoryDatabase(databaseName: $"DecolaDev.Catalogo_DB_{Guid.NewGuid()}"));
             #endregion
 
             #region Dependency Injectionn

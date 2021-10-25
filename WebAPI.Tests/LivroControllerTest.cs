@@ -21,62 +21,21 @@ namespace DecolaDev.Catalogo.WebAPI.Tests
 
         public LivroControllerTest(WebApplicationFixture webAppFixture)
         {
-            _webAppFixture = webAppFixture;
+            _webAppFixture = new WebApplicationFixture();
         }
 
-        [Fact(DisplayName = "DADO um Livro válido QUANDO solicitamos sua inclusão ENTÃO retornar StatusCode = Created")]
-        public async Task PostWhenIsValid()
+        [Theory(DisplayName = "DADO um Livro válido QUANDO solicitamos sua inclusão ENTÃO retornar StatusCode = Created")]
+        [ClassData(typeof(TestDataGenerator))]
+        public async Task Post(Livro livro)
         {
             //Arrange
             HttpClient httpClient = _webAppFixture.CreateHttpClient();
             
-            Livro model = new Livro();
-
             //Act
-            var response = await httpClient.PostAsJsonAsync("/api/Livro", model);
+            var response = await httpClient.PostAsJsonAsync("/api/Livro", livro);
 
             //Assert
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
         }
-
-        [Fact(DisplayName = "DADO um livro válido QUANDO chamado o Update E exisitir na base ENTÃO retornar StatusCode.NoContent (204)")]
-        public async Task UpdateAsync()
-        {
-            //Arrange
-            var livro = new Livro();
-
-            var livroService = new Mock<IServiceCrud<int, Livro>>();
-            livroService.Setup(o => o.UpdateAsync(It.IsAny<Livro>())).Returns(Task.FromResult(livro));
-
-            var mapper = new Mock<IMapper>();
-
-            var controller = new LivroController(livroService.Object, mapper.Object);
-
-            //Act
-            var response = await controller.Put(livro);
-
-            //Assert
-            Assert.IsAssignableFrom<NoContentResult>(response);
-        }
-        
-        [Fact(DisplayName = "DADO um livro válido QUANDO chamado o Update E não existir na base ENTÃO retornar StatusCode.NotFound (404)")]
-        public async Task UpdateAsync_NotFound()
-        {
-            //Arrange
-            var livroService = new Mock<IServiceCrud<int, Livro>>();
-            livroService.Setup(o => o.UpdateAsync(It.IsAny<Livro>())).Returns(Task.FromResult<Livro>(null));
-
-            var mapper = new Mock<IMapper>();
-            var livro = new Livro();
-
-            var controller = new LivroController(livroService.Object, mapper.Object);
-
-            //Act
-            var response = await controller.Put(livro);
-
-            //Assert
-            Assert.IsAssignableFrom<NotFoundResult>(response);
-        }
-
     }
 }
